@@ -6,20 +6,21 @@ import config
 
 def move_walker(x,y,z):
     directions = [(1,0,0), (-1,0,0), (0,1,0), (0,-1,0), (0,0,1), (0,0,-1)]
-    weights = [1,1,1,1,1+oxygen_bias, 1-oxygen_bias]
+    weights = [1,1,1,1,1+config.oxygen_bias, 1-config.oxygen_bias]
     weights = np.array(weights) / np.sum(weights)
     dx, dy, dz = directions[np.random.choice(len(directions), p=weights)]
     nx, ny, nz = x+dx, y+dy, z+dz
 
 
-    if (0 <= nx <= grid_size) and (0 <= ny <= grid_size) and (0 <= nz <= grid_size):
+    if (0 <= nx <= config.grid_size) and (0 <= ny <= config.grid_size) and (0 <= nz <= config.grid_size):
         return nx, ny, nz
     else:
         return x, y, z
 
 
 def simulate(grid_size, oxygen_bias, nw_bias, num_steps, max_Walkers):
-    positions, walker_counts, cancer_cell_counts = []
+    grid = np.zeros(((grid_size), (grid_size), (grid_size)))
+    positions, walker_counts, cancer_cell_counts = [], [], []
     walkers = [((grid_size//2),(grid_size//2),(grid_size//2))]
     grid[((grid_size//2),(grid_size//2),(grid_size//2))] = 1
     oxygen = np.linspace(0,1,grid_size)
@@ -45,7 +46,7 @@ def simulate(grid_size, oxygen_bias, nw_bias, num_steps, max_Walkers):
         if random.random() < 0.02 and positions:
             popped = positions.pop()
             grid[popped[0], popped[1], popped[2]] = 0
-        if (len(new_walkers) + len(walkers) <= max_walkers) and (random.random() < nw_bias):
+        if (len(new_walkers) + len(walkers) <= config.max_walkers) and (random.random() < nw_bias):
             new_walkers.append((nx, ny, nz))
     
         walkers.extend(new_walkers)
@@ -98,7 +99,7 @@ def plot_results(positions, walker_counts, cancer_cell_counts, grid):
     plt.show()
     
 def main():
-    positions, walker_counts, cancer_cell_counts, grid = simulate(config.GRID_SIZE, config.OXYGEN_BIAS, config.NW_BIAS, config.NUM_STEPS, config.MAX_WALKERS))
+    positions, walker_counts, cancer_cell_counts, grid = simulate(config.grid_size, config.oxygen_bias, config.nw_bias, config.num_steps, config.max_walkers)
     plot_results(positions, walker_counts, cancer_cell_counts, grid)
-if __name__ = "__main__"":
+if __name__ == "__main__":
     main()

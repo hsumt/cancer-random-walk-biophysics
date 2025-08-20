@@ -1,5 +1,5 @@
-GRID_SIZE = 100
-OXYGEN_BIAS = 0.1
-NW_BIAS = 0.05
-NUM_STEPS = 200
-MAX_WALKERS = 2500
+grid_size = 100
+oxygen_bias = 0.1
+nw_bias = 0.05
+num_steps = 200
+max_walkers = 2500
