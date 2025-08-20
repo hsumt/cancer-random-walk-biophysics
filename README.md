@@ -29,7 +29,15 @@ Additionally, it was easiest to make the cancer cells only grow in 6 directions,
 ##  Example Output  
 Below is a sample result from running the simulation:
 
-![Simulation Result](results.png)
+<details>
+  <summary>Click to expand example plots</summary>
+
+  ![3D Tumor Spread](figures/3d_scatter.png)  
+  ![Walker Counts](figures/walker_counts.png)  
+  ![Cancer Cells](figures/cancer_cells.png)  
+  ![Z Distribution](figures/z_distribution.png)  
+
+</details>
 
 ---
 
