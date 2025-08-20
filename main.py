@@ -61,44 +61,48 @@ def plot_results(positions, walker_counts, cancer_cell_counts, grid):
     ax = fig.add_subplot(111, projection='3d')
     ax.scatter(x_steps, y_steps, z_steps, c = 'red', marker='o')
     
-    # 3D Graph
-    plt.title("3D Biased Cancer Cell Random Walk")
-    plt.xlabel("X")
-    plt.ylabel("Y")
+    # 3D scatter
+    fig = plt.figure()
+    ax = fig.add_subplot(111, projection='3d')
+    ax.scatter(x_steps, y_steps, z_steps, c='red', marker='o')
+    ax.set_title("3D Biased Cancer Cell Random Walk")
+    ax.set_xlabel("X")
+    ax.set_ylabel("Y")
     ax.set_zlabel("Z")
     plt.tight_layout()
     fig.savefig("graph.png", dpi=300)
     plt.show()
-    
+
     # Walker Counts
-    plt.figure()
+    fig2 = plt.figure()
     plt.plot(walker_counts, color='blue')
     plt.title("Walker Counts over Time")
     plt.xlabel("Step")
     plt.ylabel("Walker Counts")
     plt.grid(True)
-    fig.savefig("walkercount.png", dpi=300)
+    fig2.savefig("walkercount.png", dpi=300)
     plt.show()
-    
+
     # Cancer Cell Counts
-    plt.figure()
+    fig3 = plt.figure()
     plt.plot(cancer_cell_counts, color='orange')
     plt.title("Total Cancer Cells Over Time")
     plt.xlabel("Step")
     plt.ylabel("Total Cancer Cells")
     plt.grid(True)
-    fig.savefig("cellcount.png", dpi=300)
+    fig3.savefig("cellcount.png", dpi=300)
     plt.show()
-    
-    #Distribution along the Z-axis
+
+    # Z-axis distribution
     occupied = np.argwhere(grid == 1)
     z_vals = occupied[:,2]
+    fig4 = plt.figure()
     plt.hist(z_vals, bins=20, color='green', edgecolor='black')
     plt.title("Cell Distribution Along Oxygen Gradient (Z-axis)")
     plt.xlabel("Z Position")
     plt.ylabel("Cell Count")
     plt.grid(True)
-    fig.savefig("distribution.png", dpi=300)
+    fig4.savefig("distribution.png", dpi=300)
     plt.show()
     
 def main():
