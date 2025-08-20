@@ -32,10 +32,10 @@ Below is a sample result from running the simulation:
 <details>
   <summary>Click to expand example plots</summary>
 
-  ![3D Tumor Spread](results/3d_scatter.png)  
-  ![Walker Counts](results/walker_counts.png)  
-  ![Cancer Cells](results/cancer_cells.png)  
-  ![Z Distribution](results/z_distribution.png)  
+  ![3D Tumor Spread](results/graph.png)  
+  ![Walker Counts](results/walkercount.png)  
+  ![Cancer Cells](results/cellcount.png)  
+  ![Z Distribution](results/distribution.png)  
 
 </details>
 
