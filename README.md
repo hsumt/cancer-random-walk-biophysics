@@ -32,10 +32,10 @@ Below is a sample result from running the simulation:
 <details>
   <summary>Click to expand example plots</summary>
 
-  ![3D Tumor Spread](results/graph.png)  
-  ![Walker Counts](results/walkercount.png)  
-  ![Cancer Cells](results/cellcount.png)  
-  ![Z Distribution](results/distribution.png)  
+  ![3D Tumor Spread](<img width="1920" height="1440" alt="image" src="https://github.com/user-attachments/assets/5db68757-9055-49b3-b3ca-7f1131c5dfa7" />)  
+  ![Walker Counts](<img width="1920" height="1440" alt="image" src="https://github.com/user-attachments/assets/49f3d0c7-3f38-4644-80dc-c5f9e28a6771" />)  
+  ![Cancer Cells](<img width="1920" height="1440" alt="image" src="https://github.com/user-attachments/assets/0e12020e-b85b-41ea-a1e9-fe2282117ba1" />)  
+  ![Z Distribution](<img width="1920" height="1440" alt="image" src="https://github.com/user-attachments/assets/4938a671-26dc-4dc4-a6a1-dbc615d11a88" />)  
 
 </details>
 
