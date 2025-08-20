@@ -65,6 +65,8 @@ def plot_results(positions, walker_counts, cancer_cell_counts, grid):
     plt.xlabel("X")
     plt.ylabel("Y")
     ax.set_zlabel("Z")
+    plt.tight_layout()
+    fig.savefig("results.png", dpi=300)
     plt.show()
     
     # Walker Counts
