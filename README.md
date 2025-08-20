@@ -16,7 +16,7 @@ Originally started and presented at the California School of Mathematics and Sci
 ## Core Implementation:
 - Moving the Walker:
 def move_walker(x,y,z):
-	# Moves the Walker from its original position (x,y,z) on the 3D Plane
+	(Moves the Walker from its original position (x,y,z) on the 3D Plane)
 	directions = [(1,0,0), (-1,0,0), (0,1,0), (0,-1,0), (0,0,1), (0,0,-1)]
 	weights = [1,1,1,1,1+o_bias, 1-o_bias]
 	weights = np.array(weights) / np.sum(weights)
