@@ -67,7 +67,7 @@ def plot_results(positions, walker_counts, cancer_cell_counts, grid):
     plt.ylabel("Y")
     ax.set_zlabel("Z")
     plt.tight_layout()
-    fig.savefig("results.png", dpi=300)
+    fig.savefig("graph.png", dpi=300)
     plt.show()
     
     # Walker Counts
@@ -77,6 +77,7 @@ def plot_results(positions, walker_counts, cancer_cell_counts, grid):
     plt.xlabel("Step")
     plt.ylabel("Walker Counts")
     plt.grid(True)
+    fig.savefig("walkercount.png", dpi=300)
     plt.show()
     
     # Cancer Cell Counts
@@ -86,6 +87,7 @@ def plot_results(positions, walker_counts, cancer_cell_counts, grid):
     plt.xlabel("Step")
     plt.ylabel("Total Cancer Cells")
     plt.grid(True)
+    fig.savefig("cellcount.png", dpi=300)
     plt.show()
     
     #Distribution along the Z-axis
@@ -96,6 +98,7 @@ def plot_results(positions, walker_counts, cancer_cell_counts, grid):
     plt.xlabel("Z Position")
     plt.ylabel("Cell Count")
     plt.grid(True)
+    fig.savefig("distribution.png", dpi=300)
     plt.show()
     
 def main():
